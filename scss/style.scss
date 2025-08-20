@@ -38,9 +38,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	@media (max-width: toEm(540)) {
-		padding-bottom: toRem(75);
-	}
 }
 .wrapper > main {
 	flex-grow: 1;

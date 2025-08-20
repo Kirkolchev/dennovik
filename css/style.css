@@ -384,11 +384,6 @@ body.menu-open {
           flex-direction: column;
   min-height: 100%;
 }
-@media (max-width: 33.75em) {
-  .wrapper {
-    padding-bottom: 4.6875rem;
-  }
-}
 
 .wrapper > main {
   -webkit-box-flex: 1;
