@@ -208,6 +208,9 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 @media (any-hover: hover) {
+  .menu__link:hover {
+    color: #070707;
+  }
   .menu__link:hover::before {
     width: 100%;
     left: 0;
@@ -344,16 +347,17 @@ h6 {
   }
 }
 .action__link {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 @media (any-hover: hover) {
   .action__link:hover {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
+    opacity: 0.5;
   }
 }
 
