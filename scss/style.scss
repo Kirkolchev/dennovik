@@ -1,0 +1,56 @@
+@use "sass:math";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 970;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Кольори
+$textColor: #828282;
+$darkColor: #070707;
+$bgColor: #f6f6f6;
+
+// Функції
+@import "_functions.scss";
+
+@import "_reset.scss";
+// Компоненти
+@import "_header.scss";
+@import "_footer.scss";
+body {
+	font-family: "Open Sans", sans-serif;
+	color: $darkColor;
+	&.menu-open {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	@media (max-width: toEm(540)) {
+		padding-bottom: toRem(75);
+	}
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+	max-width: #{toRem($maxWidthContainer)};
+	margin: 0 auto;
+	padding-left: toRem(15);
+	padding-right: toRem(15);
+}
+
+// Сторінки
+@import "_home.scss";

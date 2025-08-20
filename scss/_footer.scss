@@ -1,0 +1,80 @@
+.footer {
+    @include adaptiveValue("padding-block", 100, 50);
+    // .footer__container
+    &__container {
+        text-align: center;
+    }
+
+    // .footer__top
+
+    &__top {
+        @include adaptiveValue("margin-bottom", 60, 30);
+    }
+
+    // .footer__title
+
+    &__title {
+        margin-bottom: toRem(20);
+    }
+
+    // .footer__sab-title
+
+    &__sab-title {
+        font-weight: 400;
+        font-size: toRem(18);
+    }
+
+    // .footer__action
+
+    &__action {
+    }
+
+    // .footer__copirate
+
+    &__copirate {
+        font-weight: 400;
+        font-size: toRem(14);
+        color: $textColor;
+    }
+}
+.title {
+}
+.action {
+    @include adaptiveValue("margin-bottom", 60, 40);
+    // .action__link-messeg
+    &__link-messeg {
+        color: #fff;
+        margin-bottom: toRem(30);
+        font-weight: 700;
+        font-size: toRem(18);
+        border-radius: toRem(22);
+        padding: toRem(10) toRem(16);
+        background-color: $darkColor;
+        transition: background-color 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: darken($textColor, 10%);
+            }
+        }
+    }
+
+    // .action__social
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include adaptiveValue("gap", 50, 20);
+    }
+
+    // .action__link
+
+    &__link {
+        transition: transform 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

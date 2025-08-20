@@ -1,0 +1,76 @@
+.header {
+    margin-bottom: toRem(12);
+    // .header__container
+    &__container {
+        @include adaptiveValue("padding-block", 25, 15);
+        border-bottom: 1px solid $textColor;
+    }
+
+    // .header__menu
+    &__menu {
+    }
+}
+.menu {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 50, 20, 0, 768, 420);
+    justify-content: center;
+
+    // .menu__body
+    &__body {
+    }
+
+    // .menu__list
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include adaptiveValue("column-gap", 40, 20);
+        row-gap: toRem(10);
+    }
+
+    // .menu__item
+
+    &__item {
+    }
+
+    // .menu__link
+
+    &__link {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: $textColor;
+        position: relative;
+        &--active {
+            color: $darkColor;
+        }
+
+        &::before {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 2px;
+            background-color: $darkColor;
+            transition: all 0.3s ease-in-out;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    // .menu__link--active
+
+    &__link--active {
+    }
+}
+.icon-menu {
+}

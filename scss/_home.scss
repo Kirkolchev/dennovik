@@ -1,0 +1,214 @@
+.title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 34, 28);
+}
+
+.page {
+    // .page__user
+
+    &__user {
+    }
+}
+.user {
+    // .about__title
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 48, 38);
+        @include adaptiveValue("margin-bottom", 50, 30);
+    }
+
+    // .user__image
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 970 / 387;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ABOUT
+
+.page {
+    // .page__about
+
+    &__about {
+        text-align: center;
+        background-color: $bgColor;
+        @include adaptiveValue("padding-block", 100, 50);
+    }
+}
+.about {
+    // .about__contauner
+
+    &__container {
+    }
+
+    // .about__title
+
+    &__title {
+        @include adaptiveValue("margin-bottom", 50, 25);
+    }
+
+    // .about__text
+
+    &__text {
+        max-width: toRem(480);
+        margin: 0 auto;
+        line-height: 1.5;
+        & > *:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// SKILLS
+.page {
+    // .page__skills
+
+    &__skills {
+        @include adaptiveValue("padding-block", 100, 50);
+    }
+}
+.skills {
+    // .skills__container
+
+    &__container {
+    }
+
+    // .skills__top
+
+    &__top {
+        text-align: center;
+        margin-bottom: toRem(50);
+    }
+
+    // .skills__title
+
+    &__title {
+        margin-bottom: toRem(20);
+    }
+
+    // .skills__subtitle
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    // .skills__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(170), 1fr));
+        @include adaptiveValue("gap", 50, 30);
+    }
+
+    // .skills__item
+
+    &__item {
+    }
+}
+.title {
+}
+.item-skills {
+    display: grid;
+    justify-items: center;
+    // .item-skills__icon
+
+    &__icon {
+        margin-bottom: toRem(25);
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .item-skills__title
+
+    &__title {
+        @include adaptiveValue("margin-bottom", 60, 30);
+        font-weight: 600;
+        font-size: toRem(14);
+        color: $textColor;
+    }
+
+    // .item-skills__star
+
+    &__star {
+    }
+
+    @media (max-width: toEm(491.98)) {
+        padding: toRem(20);
+        border: toRem(1) solid $darkColor;
+        border-radius: toRem(10);
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//   PORTFOLIO
+
+.page {
+    // .page__portfolio
+
+    &__portfolio {
+        @include adaptiveValue("padding-block", 100, 50);
+        background-color: $bgColor;
+    }
+}
+.portfolio {
+    // .portfolio__container
+
+    &__container {
+    }
+
+    // .portfolio__title
+
+    &__title {
+        font-weight: 700;
+        font-size: toRem(34);
+        text-align: center;
+        margin-bottom: toRem(50);
+    }
+
+    // .portfolio__body
+
+    &__body {
+        display: grid;
+        @include adaptiveValue("row-gap", 70, 50);
+    }
+
+    // .portfolio__item
+
+    &__item {
+    }
+}
+.title {
+}
+.item-portfolio {
+    text-align: center;
+    // .item-portfolio__img
+    &__img {
+        @include adaptiveValue("margin-bottom", 40, 20);
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 970 / 540;
+        }
+    }
+
+    // .item-portfolio__link
+
+    &__link {
+        text-align: center;
+        font-weight: 400;
+        font-size: toRem(18);
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+    }
+}
